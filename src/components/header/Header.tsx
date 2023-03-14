@@ -1,11 +1,13 @@
 import { Image } from "@chakra-ui/react";
 import React from "react";
 
+import logoSrc from "/img/logo.png";
+
 const Header = () => {
   return (
-    <div>
-      <Image />
-    </div>
+    <header>
+      <Image src={logoSrc} />
+    </header>
   );
 };
 

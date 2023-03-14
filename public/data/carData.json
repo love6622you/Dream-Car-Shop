@@ -1,0 +1,125 @@
+[
+  {
+    "type": "Mercedes-Benz",
+    "cars": [
+      {
+        "image": "/img/Mercedes-Benz-car1.webp",
+        "name": "Mercedes Benz AMG G63 2020 ( BRABUS KIT )",
+        "price": "1,999",
+        "desc": { "door": "4", "seat": "4", "transmission": "Automatic" }
+      },
+      {
+        "image": "/img/Mercedes-Benz-car2.webp",
+        "name": "Mercedes Benz AMG GT Convertible 2018",
+        "price": "1,799",
+        "desc": { "door": "2", "seat": "2", "transmission": "Automatic" }
+      },
+      {
+        "image": "/img/Mercedes-Benz-car3.webp",
+        "name": "Mercedes Benz E450 Convertible 2021",
+        "price": " 799",
+        "desc": { "door": "2", "seat": "4", "transmission": "Automatic" }
+      }
+    ]
+  },
+  {
+    "type": "Range Rover",
+    "cars": [
+      {
+        "image": "/img/Range-Rover-car1.webp",
+        "name": "Range Rover SVR Blue 2020",
+        "price": "1,299",
+        "desc": { "door": "4", "seat": "4", "transmission": "Automatic" }
+      },
+      {
+        "image": "/img/Range-Rover-car2.webp",
+        "name": "Range Rover SVR Matte Gray 2021",
+        "price": "1,299",
+        "desc": { "door": "4", "seat": "4", "transmission": "Automatic" }
+      },
+      {
+        "image": "/img/Range-Rover-car3.webp",
+        "name": "Range Rover SVR White 2019",
+        "price": "1,199",
+        "desc": { "door": "4", "seat": "4", "transmission": "Automatic" }
+      }
+    ]
+  },
+  {
+    "type": "Featured Cars",
+    "cars": [
+      {
+        "image": "/img/Featured-Cars-car1.webp",
+        "name": "Chevrolet Corvette Stingray C8 2020",
+        "price": "1,199",
+        "desc": { "door": "2", "seat": "2", "transmission": "Automatic" }
+      },
+      {
+        "image": "/img/Featured-Cars-car2.webp",
+        "name": "Chevrolet Camaro SS Convertible V8 2020",
+        "price": "599",
+        "desc": { "door": "2", "seat": "4", "transmission": "Automatic" }
+      },
+      {
+        "image": "/img/Featured-Cars-car3.webp",
+        "name": "Ford Mustang EcoBoost Yellow 2019",
+        "price": "450",
+        "desc": { "door": "2", "seat": "4", "transmission": "Automatic" }
+      },
+      {
+        "image": "/img/Featured-Cars-car4.webp",
+        "name": "Range Rover SVR Silver 2021",
+        "price": "1,299",
+        "desc": { "door": "4", "seat": "4", "transmission": "Automatic" }
+      },
+      {
+        "image": "/img/Featured-Cars-car5.webp",
+        "name": "Range Rover Sport White 2020",
+        "price": "899",
+        "desc": { "door": "4", "seat": "4", "transmission": "Automatic" }
+      },
+      {
+        "image": "/img/Featured-Cars-car6.webp",
+        "name": "Range Rover Vogue L -Special Edition",
+        "price": "950",
+        "desc": { "door": "4", "seat": "4", "transmission": "Automatic" }
+      },
+      {
+        "image": "/img/Featured-Cars-car7.webp",
+        "name": "Nissan Patrol Platinum 2019",
+        "price": "450",
+        "desc": { "door": "4", "seat": "7", "transmission": "Automatic" }
+      },
+      {
+        "image": "/img/Featured-Cars-car8.webp",
+        "name": "Nissan Patrol Armada 2019",
+        "price": "450",
+        "desc": { "door": "4", "seat": "5", "transmission": "Automatic" }
+      },
+      {
+        "image": "/img/Featured-Cars-car9.webp",
+        "name": "BMW 750Li M 2020",
+        "price": "899",
+        "desc": { "door": "4", "seat": "5", "transmission": "Automatic" }
+      },
+      {
+        "image": "/img/Featured-Cars-car10.webp",
+        "name": "Dodge Challenger V6 2019",
+        "price": "399",
+        "desc": { "door": "2", "seat": "4", "transmission": "Automatic" }
+      },
+      {
+        "image": "/img/Featured-Cars-car11.webp",
+        "name": "Dodge Charger V6 2019",
+        "price": "399",
+        "desc": { "door": "4", "seat": "4", "transmission": "Automatic" }
+      },
+      {
+        "image": "/img/Featured-Cars-car12.webp",
+        "name": "Ford Mustang EcoBoost Black 2019",
+        "price": "450",
+        "desc": { "door": "2", "seat": "4", "transmission": "Automatic" }
+      }
+    ]
+  }
+]
