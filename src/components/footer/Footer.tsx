@@ -40,7 +40,8 @@ const Footer = () => {
                   mb={"22px"}
                   color={"#FFFFFFCC"}
                 >
-                  {info}: {contactInfo[info]}
+                  {info} <br />
+                  {contactInfo[info]}
                 </Text>
               ))}
             </GridItem>
