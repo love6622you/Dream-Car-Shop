@@ -24,17 +24,20 @@ const contactInfo: InfoType = {
 const Footer = () => {
   return (
     <>
-      <Box bgColor={"#212020"}>
-        <Container maxW={"1170px"} h={"450px"} py={12}>
-          <Grid
-            templateColumns={{ base: "repeat(4,1fr)", lg: "repeat(4,1fr)" }}
-          >
+      <Box bgColor={"#212020"} py={{ base: 12 }}>
+        <Container maxW={{ lg: "1170px" }}>
+          <Grid templateColumns={{ lg: "repeat(4,1fr)" }}>
             <GridItem colStart={4} textAlign={"right"}>
               <Heading fontSize={"3xl"} my={6}>
                 Contact Us
               </Heading>
               {Object.keys(contactInfo).map((info) => (
-                <Text mt={"15px"} mb={"22px"} color={"#FFFFFFCC"}>
+                <Text
+                  key={contactInfo[info]}
+                  mt={"15px"}
+                  mb={"22px"}
+                  color={"#FFFFFFCC"}
+                >
                   {contactInfo[info]}
                 </Text>
               ))}
@@ -43,10 +46,10 @@ const Footer = () => {
         </Container>
       </Box>
 
-      <Box bgColor={"#191919"}>
-        <Container maxW={"1170px"} h={"120px"}>
+      <Box bgColor={"#191919"} py={{ base: 6 }}>
+        <Container maxW={{ lg: "1170px" }}>
           <Flex alignItems={"center"} h={"full"} gap={5}>
-            <Image src={logoSrc} />
+            <Image src={logoSrc} h={{ base: "45px", lg: "fit-content" }} />
             <Text fontSize={"sm"} color={"#FFFFFF80"}>
               © 2022 Lux Motors Car Rental L.L.C. All Right Reserved.
             </Text>

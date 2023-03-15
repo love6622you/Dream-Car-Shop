@@ -8,10 +8,19 @@ const CarList = () => {
     <>
       {carTypes.map((list) => (
         <Box key={list.type}>
-          <Heading textAlign={"center"} fontSize={"3xl"} my={6}>
+          <Heading
+            textAlign={"center"}
+            fontSize={{ base: "1.625rem", lg: "3xl" }}
+            my={{ base: 5, lg: 6 }}
+          >
             {list.type}
           </Heading>
-          <SimpleGrid columns={3} gap={7} pt={2.5} pb={10}>
+          <SimpleGrid
+            columns={{ base: 1, lg: 3 }}
+            gap={"1.875rem"}
+            pt={2.5}
+            pb={10}
+          >
             {list.cars.map((car) => (
               <CarItem key={car.name} car={car} />
             ))}

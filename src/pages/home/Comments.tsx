@@ -9,27 +9,24 @@ import {
   Avatar,
   Heading
 } from "@chakra-ui/react";
-import { ArrowBackIcon, ArrowForwardIcon, StarIcon } from "@chakra-ui/icons";
+import { StarIcon } from "@chakra-ui/icons";
 import Slider from "react-slick";
 import comments from "@/assets/data/comment.json";
 
-// Settings for the slider
-const settings = {
-  dots: true,
-  autoplay: false,
-  speed: 300,
-  autoplaySpeed: 5000,
-  slidesToShow: 3,
-  slidesToScroll: 1
-};
-
 export default function Comments() {
   const [slider, setSlider] = React.useState<Slider | null>(null);
-
-  // These are the breakpoints which changes the position of the
-  // buttons as the screen size changes
-  const top = useBreakpointValue({ base: "90%", md: "50%" });
+  const top = useBreakpointValue({ base: "95%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "0px" });
+
+  // Settings for the slider
+  const settings = {
+    dots: false,
+    autoplay: false,
+    speed: 300,
+    autoplaySpeed: 5000,
+    slidesToShow: useBreakpointValue({ base: 1, lg: 3 }),
+    slidesToScroll: 1
+  };
 
   const CarouselsArrowIcon = ({ config }: any) => {
     return (
@@ -39,12 +36,11 @@ export default function Comments() {
         top={top}
         transform={"translate(0%, -50%)"}
         zIndex={2}
-        border={"1px solid #FFF"}
+        border={"1px solid #e2e8f0"}
         borderRadius={"100%"}
-        bg={"transparent"}
+        bg={"#fff"}
         _hover={{
-          bg: "#181A1B",
-          opacity: 0.8
+          bg: "#d7dbe0"
         }}
         {...config}
       />
@@ -58,23 +54,23 @@ export default function Comments() {
       </Heading>
       <Box
         position={"relative"}
-        height={"400px"}
+        maxW={"100vw"}
+        height={{ base: "450px", lg: "400px" }}
         overflow={"hidden"}
-        maxWidth={"1400px"}
         mx={"auto"}
         color={"#718096"}
       >
         <CarouselsArrowIcon
           config={{
             left: side,
-            icon: <ArrowBackIcon boxSize="20px" />,
+            icon: <span>＜</span>,
             onClick: () => slider?.slickPrev()
           }}
         />
         <CarouselsArrowIcon
           config={{
             right: side,
-            icon: <ArrowForwardIcon boxSize="20px" />,
+            icon: <span>＞</span>,
             onClick: () => slider?.slickNext()
           }}
         />
@@ -82,14 +78,15 @@ export default function Comments() {
         {/* Slider */}
         <Slider {...settings} ref={(slider) => setSlider(slider)}>
           {comments.map((info, index) => (
-            <Box key={index} height={"400px"}>
+            <Box key={index}>
               <Stack
-                w={"440px"}
-                h={"full"}
+                w={{ base: "384px", lg: "440px" }}
+                h={{ base: "374px", lg: "400px" }}
                 bgColor={"#FFF"}
                 p={10}
                 pb={12}
                 rounded={"lg"}
+                mx={"auto"}
               >
                 <Text pt={5} flexGrow={1}>
                   {info.comment}

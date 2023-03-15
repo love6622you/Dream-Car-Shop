@@ -1,12 +1,4 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Image,
-  SimpleGrid,
-  Stack,
-  Text
-} from "@chakra-ui/react";
+import { Box, Heading, Image, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 
 const list = [
@@ -39,11 +31,14 @@ const FeatureCard = (props: FeatureCardProps) => {
     <Stack
       justify={"center"}
       alignItems={"center"}
-      maxW={{ base: "345px", lg: "fit-content" }}
+      maxW={{ base: "384px", lg: "fit-content" }}
+      mx={"auto"}
     >
       <Image src={icon} boxSize={"7.5rem"} mb={4} />
       <Text fontSize={"1.375rem"}>{title}</Text>
-      <Text pt={2} color={'#FAFAFA'}>{text}</Text>
+      <Text pt={2} color={"#FAFAFA"}>
+        {text}
+      </Text>
     </Stack>
   );
 };
@@ -51,7 +46,12 @@ const FeatureCard = (props: FeatureCardProps) => {
 const Features = () => {
   return (
     <Box textAlign={"center"} py={"1.875rem"}>
-      <Heading mb={6}>Rent Your Dream Car</Heading>
+      <Heading
+        mb={{ base: 10, lg: 6 }}
+        fontSize={{ base: "1.625rem", lg: "3xl" }}
+      >
+        Rent Your Dream Car
+      </Heading>
 
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={"1.875rem"}>
         {list.map((item) => (

@@ -13,21 +13,39 @@ import questions from "@/assets/data/faq.json";
 const FAQ = () => {
   return (
     <Box pb={5}>
-      <Heading fontSize={"3xl"} m={"1.875rem"} textAlign={"center"}>
+      <Heading
+        fontSize={{ base: "1.625rem", lg: "3xl" }}
+        m={"1.875rem"}
+        textAlign={"center"}
+      >
         FAQs
       </Heading>
 
       {questions.map((faq) => (
         <Accordion allowToggle={true} key={faq.title}>
           <AccordionItem bg={"black"} border={"none"} mb={5}>
-            <AccordionButton minH={"6.25rem"} fontWeight={600} px={10}>
-              <Box as="span" flex="1" textAlign="left" fontSize={"2xl"}>
+            <AccordionButton
+              fontWeight={600}
+              px={{ base: 6, lg: 10 }}
+              py={{ base: 6, lg: 8 }}
+            >
+              <Box
+                as="span"
+                flex="1"
+                textAlign="left"
+                fontSize={{ base: "lg", lg: "2xl" }}
+              >
                 {faq.title}
               </Box>
               <AccordionIcon />
             </AccordionButton>
 
-            <AccordionPanel px={"3.125rem"} pb={10}>
+            <AccordionPanel
+              color={"#BFBFBF"}
+              px={{ base: 6, lg: "3.125rem" }}
+              pb={{ base: 6, lg: 10 }}
+              pt={0}
+            >
               {faq.text}
             </AccordionPanel>
           </AccordionItem>

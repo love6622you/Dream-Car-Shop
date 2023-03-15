@@ -7,7 +7,7 @@ import Header from "../components/header/Header";
 const RootLayout = () => {
   return (
     <Grid bg={"#323638"} color={"#fff"} fontWeight={600}>
-      <GridItem as={"header"}>
+      <GridItem as={"header"} h={{ base: "90px" }}>
         <Header />
       </GridItem>
 

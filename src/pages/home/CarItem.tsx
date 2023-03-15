@@ -6,7 +6,6 @@ import {
   Divider,
   Heading,
   Image,
-  Stack,
   Text,
   VStack
 } from "@chakra-ui/react";
@@ -32,23 +31,34 @@ type CardItemProps = {
 const CarItem = ({ car }: CardItemProps) => {
   const { name, image, price, desc } = car;
   return (
-    <Card maxW="sm" backgroundColor={"#22273A"} color={"inherit"}>
+    <Card backgroundColor={"#22273A"} color={"inherit"}>
       <CardHeader p={0}>
-        <Image src={image} alt={name} borderRadius="lg" />
+        <Image
+          src={image}
+          alt={name}
+          borderRadius="lg"
+          w={"full"}
+          h={{ base: "260px" }}
+          objectFit={"cover"}
+        />
       </CardHeader>
 
       <CardBody pt={4} px={6} textAlign={"center"}>
         <Heading size="md" isTruncated>
           {name}
         </Heading>
-        <VStack spacing={1.5} pt={6} color={'#DBDBDB'}>
+        <VStack
+          spacing={{ base: 0, lg: 1.5 }}
+          pt={{ base: 4, lg: 6 }}
+          color={"#DBDBDB"}
+        >
           <Text>Doors: {desc.door}</Text>
           <Text>Seat: {desc.seat}</Text>
           <Text>Transmission: {desc.transmission}</Text>
         </VStack>
       </CardBody>
 
-      <Divider w={"90%"} mx={"auto"} color={"#27374c"} />
+      <Divider w={"90%"} mx={"auto"} color={"#FFF"} />
 
       <CardFooter px={6} justify={"space-between"} alignItems={"center"}>
         <Text>Details</Text>
