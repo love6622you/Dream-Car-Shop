@@ -1,5 +1,4 @@
 import { Box, Container, Flex, Image } from "@chakra-ui/react";
-import React from "react";
 
 import logoSrc from "/img/logo.png";
 

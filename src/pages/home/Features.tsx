@@ -1,5 +1,4 @@
 import { Box, Heading, Image, SimpleGrid, Stack, Text } from "@chakra-ui/react";
-import React from "react";
 
 const list = [
   {

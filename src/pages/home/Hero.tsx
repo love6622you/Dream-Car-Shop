@@ -1,5 +1,4 @@
-import React from "react";
-import { Stack, Flex, useBreakpointValue, Heading } from "@chakra-ui/react";
+import { Stack, Flex, Heading } from "@chakra-ui/react";
 
 import bgBanner from "/img/car-banner.jpeg";
 

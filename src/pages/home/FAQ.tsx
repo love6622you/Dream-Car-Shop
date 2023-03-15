@@ -7,7 +7,6 @@ import {
   AccordionPanel,
   Heading
 } from "@chakra-ui/react";
-import React from "react";
 import questions from "@/assets/data/faq.json";
 
 const FAQ = () => {

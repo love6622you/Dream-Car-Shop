@@ -16,7 +16,7 @@ type InfoType = {
 };
 
 const contactInfo: InfoType = {
-  Company: "Dream Car Rentall L.L.C.",
+  // Company: "Dream Car Rentall L.L.C.",
   Email: "sales@dreamcar-rental.com",
   Address: "ALmajd building shop 11"
 };

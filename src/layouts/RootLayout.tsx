@@ -1,6 +1,5 @@
 import Footer from "@/components/footer/Footer";
 import { Grid, GridItem } from "@chakra-ui/react";
-import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../components/header/Header";
 
