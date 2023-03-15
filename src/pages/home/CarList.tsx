@@ -11,12 +11,12 @@ const CarList = () => {
           <Heading
             textAlign={"center"}
             fontSize={{ base: "1.625rem", lg: "3xl" }}
-            my={{ base: 5, lg: 6 }}
+            my={{ base: 5, md: 6 }}
           >
             {list.type}
           </Heading>
           <SimpleGrid
-            columns={{ base: 1, lg: 3 }}
+            columns={{ base: 1, md: 2, lg: 3 }}
             gap={"1.875rem"}
             pt={2.5}
             pb={10}

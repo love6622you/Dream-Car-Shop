@@ -47,7 +47,7 @@ const Features = () => {
   return (
     <Box textAlign={"center"} py={"1.875rem"}>
       <Heading
-        mb={{ base: 10, lg: 6 }}
+        mb={{ base: 10, md: 6 }}
         fontSize={{ base: "1.625rem", lg: "3xl" }}
       >
         Rent Your Dream Car

@@ -10,7 +10,7 @@ import CarList from "./home/CarList";
 const Home = () => {
   const Desc = () => {
     return (
-      <Box pb={10} display={{ base: "none", lg: "block" }}>
+      <Box pb={10} display={{ base: "none", md: "block" }}>
         <Heading fontSize={"3xl"} textAlign={"center"} my={"6"}>
           Rent Your Dream Car
         </Heading>
@@ -31,14 +31,14 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <Container maxW={{ base: "540px", lg: "1170px" }}>
+      <Container maxW={{ base: "540px", md: "750px", lg: "1170px" }}>
         <Desc />
         <CarList />
         <Features />
       </Container>
       {/* <Comments /> */}
 
-      <Container maxW={{ base: "540px", lg: "1170px" }}>
+      <Container maxW={{ base: "540px", md: "750px", lg: "1170px" }}>
         <FAQ />
       </Container>
     </>

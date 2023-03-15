@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <>
       <Box bgColor={"#212020"} py={{ base: 12 }}>
-        <Container maxW={{ base: "540px", lg: "1170px" }}>
+        <Container maxW={{ base: "540px", md: "750px", lg: "1170px" }}>
           <Grid templateColumns={{ lg: "repeat(4,1fr)" }}>
             <GridItem colStart={4} textAlign={"right"}>
               <Heading fontSize={"3xl"} my={6}>
@@ -47,7 +47,7 @@ const Footer = () => {
       </Box>
 
       <Box bgColor={"#191919"} py={{ base: 6 }}>
-        <Container maxW={{ base: "540px", lg: "1170px" }}>
+        <Container maxW={{ base: "540px", md: "750px", lg: "1170px" }}>
           <Flex alignItems={"center"} h={"full"} gap={5}>
             <Image src={logoSrc} h={{ base: "45px", lg: "fit-content" }} />
             <Text fontSize={"sm"} color={"#FFFFFF80"}>
