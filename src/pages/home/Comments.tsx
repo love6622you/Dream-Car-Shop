@@ -55,7 +55,7 @@ export default function Comments() {
   };
 
   return (
-    <Box pb={"1.875rem"}>
+    <Box pb={"1.875rem"} maxW={"1400px"} mx={"auto"}>
       <Heading fontSize={"3xl"} m={"1.875rem"} textAlign={"center"}>
         What Clients Says
       </Heading>
@@ -65,7 +65,6 @@ export default function Comments() {
         maxW={"100vw"}
         height={{ base: "480px", md: "400px" }}
         overflow={"hidden"}
-        mx={"auto"}
         color={"#718096"}
         px={{ base: 4, md: "1.375rem", lg: 5 }}
       >
