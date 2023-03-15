@@ -16,9 +16,9 @@ type InfoType = {
 };
 
 const contactInfo: InfoType = {
-  phone: "+971 502003179",
-  email: "sales@luxmotorsdxb.com",
-  address: "Warehouse 5, Al Quoz Industrial Area 4, Dubai, United Arab Emirates"
+  Company: "Dream Car Rentall L.L.C.",
+  Email: "sales@dreamcar-rental.com",
+  Address: "ALmajd building shop 11"
 };
 
 const Footer = () => {
@@ -40,7 +40,7 @@ const Footer = () => {
                   mb={"22px"}
                   color={"#FFFFFFCC"}
                 >
-                  {contactInfo[info]}
+                  {info}: {contactInfo[info]}
                 </Text>
               ))}
             </GridItem>
@@ -55,7 +55,7 @@ const Footer = () => {
           <Flex alignItems={"center"} h={"full"} gap={5}>
             <Image src={logoSrc} h={{ base: "45px", lg: "fit-content" }} />
             <Text fontSize={"sm"} color={"#FFFFFF80"}>
-              © 2022 Lux Motors Car Rental L.L.C. All Right Reserved.
+              © 2022 Dream Car Rentall L.L.C. All Right Reserved.
             </Text>
           </Flex>
         </Container>
