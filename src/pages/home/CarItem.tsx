@@ -32,20 +32,16 @@ type CardItemProps = {
 const CarItem = ({ car }: CardItemProps) => {
   const { name, image, price, desc } = car;
   return (
-    <Card maxW="sm" backgroundColor={"#1b1f28"} color={"inherit"}>
+    <Card maxW="sm" backgroundColor={"#22273A"} color={"inherit"}>
       <CardHeader p={0}>
-        <Image
-          src={image}
-          alt={name}
-          borderRadius="lg"
-        />
+        <Image src={image} alt={name} borderRadius="lg" />
       </CardHeader>
 
       <CardBody pt={4} px={6} textAlign={"center"}>
         <Heading size="md" isTruncated>
           {name}
         </Heading>
-        <VStack spacing={1.5} pt={6}>
+        <VStack spacing={1.5} pt={6} color={'#DBDBDB'}>
           <Text>Doors: {desc.door}</Text>
           <Text>Seat: {desc.seat}</Text>
           <Text>Transmission: {desc.transmission}</Text>
@@ -56,7 +52,7 @@ const CarItem = ({ car }: CardItemProps) => {
 
       <CardFooter px={6} justify={"space-between"} alignItems={"center"}>
         <Text>Details</Text>
-        <Text fontSize={"xl"} color={"#fff01a"}>
+        <Text fontSize={"xl"} color={"#FFF01A"}>
           {price} AED
         </Text>
       </CardFooter>

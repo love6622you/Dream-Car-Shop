@@ -43,7 +43,7 @@ const FeatureCard = (props: FeatureCardProps) => {
     >
       <Image src={icon} boxSize={"7.5rem"} mb={4} />
       <Text fontSize={"1.375rem"}>{title}</Text>
-      <Text pt={2}>{text}</Text>
+      <Text pt={2} color={'#FAFAFA'}>{text}</Text>
     </Stack>
   );
 };
