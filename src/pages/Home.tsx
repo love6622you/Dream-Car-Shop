@@ -31,14 +31,14 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <Container maxW={{ base: "480px", lg: "1170px" }}>
+      <Container maxW={{ base: "540px", lg: "1170px" }}>
         <Desc />
         <CarList />
         <Features />
       </Container>
       {/* <Comments /> */}
 
-      <Container maxW={{ base: "480px", lg: "1170px" }}>
+      <Container maxW={{ base: "540px", lg: "1170px" }}>
         <FAQ />
       </Container>
     </>
