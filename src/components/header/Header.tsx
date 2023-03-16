@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Image } from "@chakra-ui/react";
+import { Box, Flex, Image } from "@chakra-ui/react";
 
 import logoSrc from "/img/logo.png";
 
@@ -13,7 +13,7 @@ const Header = () => {
       zIndex={"100"}
     >
       <Flex alignItems={"center"} h={"full"} gap={5}>
-        <Image src={logoSrc} />
+        <Image src={logoSrc} h={"70px"} />
       </Flex>
     </Box>
   );

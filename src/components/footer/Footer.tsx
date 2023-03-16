@@ -54,7 +54,7 @@ const Footer = () => {
           maxW={{ base: "540px", md: "750px", lg: "970px", xl: "1170px" }}
         >
           <Flex alignItems={"center"} h={"full"} gap={5}>
-            <Image src={logoSrc} h={{ base: "45px", lg: "fit-content" }} />
+            <Image src={logoSrc} h={{ base: "45px", lg: "70px" }} />
             <Text fontSize={"sm"} color={"#FFFFFF80"}>
               © 2022 Dream Car Rentall L.L.C. All Right Reserved.
             </Text>

@@ -1,6 +1,6 @@
 import { Stack, Flex, Heading } from "@chakra-ui/react";
 
-import bgBanner from "/img/car-banner.jpeg";
+import bgBanner from "/img/car-banner.png";
 
 const Hero = () => {
   return (
