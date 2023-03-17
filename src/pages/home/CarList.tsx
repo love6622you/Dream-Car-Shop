@@ -1,4 +1,3 @@
-import React from "react";
 import carTypes from "@/assets/data/car.json";
 import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import CarItem from "./CarItem";

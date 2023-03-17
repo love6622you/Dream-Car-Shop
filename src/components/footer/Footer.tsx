@@ -16,9 +16,8 @@ type InfoType = {
 };
 
 const contactInfo: InfoType = {
-  // Company: "Dream Car Rentall L.L.C.",
-  Email: "sales@dreamcar-rental.com",
-  Address: "ALmajd building shop 11"
+  Email: import.meta.env.VITE_APP_EMAIL,
+  Address: import.meta.env.VITE_APP_ADDRESS
 };
 
 const Footer = () => {
@@ -56,7 +55,7 @@ const Footer = () => {
           <Flex alignItems={"center"} h={"full"} gap={5}>
             <Image src={logoSrc} h={{ base: "45px", lg: "70px" }} />
             <Text fontSize={"sm"} color={"#FFFFFF80"}>
-              © 2022 Dream Car Rentall L.L.C. All Right Reserved.
+              {import.meta.env.VITE_APP_FOOTER_TEXT}
             </Text>
           </Flex>
         </Container>

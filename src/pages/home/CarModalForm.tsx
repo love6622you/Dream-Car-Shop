@@ -21,6 +21,8 @@ const initalValues = {
   content: ""
 };
 
+const EMAIL = import.meta.env.VITE_APP_EMAIL;
+
 const CarModalForm = ({ carName, onClose }: CarModalFormProps) => {
   return (
     <Formik
@@ -28,7 +30,7 @@ const CarModalForm = ({ carName, onClose }: CarModalFormProps) => {
       onSubmit={(values) => {
         const { user, phone, content } = values;
         const a = document.createElement("a");
-        a.href = `mailto:sales@dreamcar-rental.com?subject=I'm interested in the ${carName}&body=Name: ${user} %0D%0APhone: ${phone} %0D%0AContent: ${content}`;
+        a.href = `mailto:${EMAIL}?subject=I'm interested in the ${carName}&body=Name: ${user} %0D%0APhone: ${phone} %0D%0AContent: ${content}`;
         a.click();
         onClose();
       }}
@@ -49,7 +51,7 @@ const CarModalForm = ({ carName, onClose }: CarModalFormProps) => {
               />
               <FormErrorMessage>{errors.user}</FormErrorMessage>
             </FormControl>
-            
+
             <FormControl>
               <FormLabel htmlFor="phone">Phone</FormLabel>
               <Field
@@ -62,7 +64,7 @@ const CarModalForm = ({ carName, onClose }: CarModalFormProps) => {
               />
               <FormErrorMessage>{errors.phone}</FormErrorMessage>
             </FormControl>
-            
+
             <FormControl>
               <FormLabel htmlFor="content">Content</FormLabel>
               <Field
