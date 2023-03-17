@@ -6,61 +6,85 @@ import {
   ModalContent,
   ModalFooter,
   ModalHeader,
-  ModalOverlay
+  ModalOverlay,
+  Text,
+  useDisclosure
 } from "@chakra-ui/react";
 import React from "react";
 
 type ModalProps = {
-  [key: string]: any;
-  type: string;
+  type?: string;
+  isLoading?: boolean;
+  title?: React.ReactNode;
+  content: React.ReactNode;
+  hasFooter?: boolean;
+  btnCallback?: () => void;
+  modalProps?: any;
 };
 
-const useModal = ({ config, type }: ModalProps) => {
-  const [visible, setVisible] = React.useState(false);
-  const showModal = () => setVisible(true);
-  const onOk = () => {
-    config.onOk && config.onOk();
-  };
-  const onCancel = () => {
-    config.onCancel && config.onCancel();
-    setVisible(false);
-  };
+enum OKTEXT_TYPE {
+  msg = "OK",
+  form = "Submit"
+}
 
-  const contentText = config.isLoading ? <span>test</span> : config.content;
+const useCustomModal = ({
+  type = "msg",
+  isLoading,
+  title,
+  content,
+  hasFooter = true,
+  btnCallback,
+  modalProps
+}: ModalProps) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  function getValueByKeyForStringEnum(value: string, enumData: object) {
+    return Object.entries(enumData).find(([key, val]) => key === value)?.[1];
+  }
+
+  const contentText = isLoading ? <Text>Loading...</Text> : content;
+  const footerText = getValueByKeyForStringEnum(type, OKTEXT_TYPE);
 
   const modal = (
     <Modal
-      forceRender
-      title={config.title}
-      centered
-      open={visible}
-      onOk={onOk}
-      onCancel={onCancel}
-      maskClosable={false}
-      {...config.modalProps}
+      size={"lg"}
+      isOpen={isOpen}
+      onClose={onClose}
+      closeOnOverlayClick={false}
+      isCentered
+      motionPreset="slideInBottom"
+      {...modalProps}
     >
-      {contentText}
+      <ModalOverlay />
+      <ModalContent>
+        <ModalHeader>{title}</ModalHeader>
+        <ModalCloseButton />
+
+        <ModalBody>{contentText}</ModalBody>
+
+        {hasFooter && (
+          <ModalFooter>
+            <Button
+              colorScheme="blue"
+              mr={3}
+              onClick={() => {
+                btnCallback && btnCallback();
+              }}
+            >
+              {footerText}
+            </Button>
+            <Button onClick={onClose}>Cancel</Button>
+          </ModalFooter>
+        )}
+      </ModalContent>
     </Modal>
   );
 
-  const modalByType = () => {
-    // Modal[`${type}`]({
-    //   title: config.title,
-    //   content: contentText,
-    //   open: visible,
-    //   centered: true,
-    //   onOk: onOk,
-    //   onCancel: onCancel,
-    //   ...config.modalProps
-    // });
-  };
   return {
-    showModal,
     modal,
-    modalByType,
-    visible,
-    setVisible
+    onOpen,
+    onClose
   };
 };
 
-export default useModal;
+export default useCustomModal;

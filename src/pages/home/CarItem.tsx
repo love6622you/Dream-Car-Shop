@@ -1,4 +1,3 @@
-import GlobalModal from "@/components/modal/GlobalModal";
 import {
   Card,
   CardBody,
